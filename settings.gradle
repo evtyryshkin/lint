@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Application"
 include ':app'
+include ':checks'
+include ':library'
