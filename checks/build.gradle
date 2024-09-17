@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    alias(libs.plugins.jetbrains.kotlin.jvm)
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    def lintVersion = '30.3.1'
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
+
+    compileOnly "com.android.tools.lint:lint-api:$lintVersion"
+    compileOnly "com.android.tools.lint:lint-checks:$lintVersion"
+
+    testImplementation "com.android.tools.lint:lint:$lintVersion"
+    testImplementation "com.android.tools.lint:lint-tests:$lintVersion"
+    testImplementation "com.android.tools:testutils:$lintVersion"
+}
